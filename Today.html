@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ToDoList</title>
+        <style>
+        #Button{
+            position: absolute;
+            left: 25%;
+            right: 25%;
+            top: 10%;
+        }
+        </style>   
+        
+        <script >
+            function Table(){
+            var rowCnt=22;
+            var columnCnt=2;
+            document.write('<table border="1" height="800px" style="top: 50%;" id="table">');
+            document.write('<th>Time</th>'); 
+            document.write('<th>ToDoList</th>');
+             for ( i=9; i < rowCnt; i++) {
+                document.write('<tr>');
+                document.write('<td>');
+                if(i==9){
+                document.write("0"+i+ ":00~"+(i+1)+ ":00");
+                document.write('</td>');
+                document.write('<td width = "800px">');
+                document.write('<input type="text" style="background-color: sienna; width: 100%; height:100%; font-size:100%;"');  
+                document.write('</td>');
+                document.write('</tr>');
+                continue;
+                     }
+                document.write(i+":00~" + (i+1) + ":00");
+                document.write('</td>');
+                document.write('<td>');
+                document.write('<input type="text" style="background-color: sienna; width: 100%; height:100%; font-size:100%;">');  
+                document.write('</td>');
+                document.write('</tr>');
+                    }
+                
+         document.write('</table>');
+                }
+        </script>
+       
+    </head>
+    <body style="background-color: sienna;">
+        <h1 style="position: absolute; left: 150px; color:ivory;">ToDoList</h1>
+       <ul>
+        <div id="Button" >
+        <a href="Today.html" ><input type="button" value="Today" style="font-size: 40px;
+            color: moccasin; background-color: sienna;" ></a>
+        <a href="Weekend.html"><input type="button" value="Weekend" style="font-size: 40px;
+            color: moccasin; background-color: sienna;"></a>
+        <a href="Month.html"><input type="button" value="Month" style="font-size: 40px;
+            color: moccasin; background-color: sienna;" ></a>
+        <a href="Year.html"><input type="button" value="Year" style="font-size: 40px;
+            color: moccasin; background-color: sienna;"></a>
+       </div>
+       </ul>
+       <ul style="position:absolute; left:10%; top:20%;">
+       
+        <script>Table()</script>
+        
+       </ul >
+       
+       
+    </body>
+</html>
