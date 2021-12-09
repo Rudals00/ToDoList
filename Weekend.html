@@ -5,14 +5,60 @@
         <style>
         #Button{
             position: absolute;
-            left: 25%;
-            right: 25%;
+            left: 20%;
+            right: 20%;
             top: 10%;
             
         }
-        </style>    
+        </style>  
+        <script>
+            function Getday(){
+                const day=document.getElementById("Day").value;
+                document.getElementById("result").innerText=day;
+               
+            }    
+        </script>  
+        <table   height="200px"  id='table' style= "position: absolute; left:100px;top: 30%; color: sienna;">
+            <tr>
+                <td style="font-weight: bold;">Day</td>
+                <td>Mon</td>
+                <td>Tue</td>
+                <td>Wed</td>
+                <td>Thu</td>
+                <td>Fri</td>
+                <td>Sat</td>
+                <td>Sun</td>
+            </tr>
+            <tr height= "400px">
+                <td style="font-weight: bold;">ToDoList</td>
+                <td ><input type="text" style="background-color: sienna;  width: 100%; height:100%; border:none; font-size:100%;"></td>
+                <td><input type="text" style="background-color: sienna;  width: 100%; height:100%; font-size:100%; border:none;"></td>
+                <td><input type="text" style="background-color: sienna; width: 100%; height:100%; font-size:100%;border:none;"></td>
+                <td><input type="text" style="background-color: sienna; width: 100%; height:100%; font-size:100%;border:none;"></td>
+                <td><input type="text" style="background-color: sienna; width: 100%; height:100%; font-size:100%;border:none;"></td>
+                <td><input type="text" style="background-color: sienna; width: 100%; height:100%; font-size:100%;border:none;"></td>
+                <td><input type="text" style="background-color: sienna; width: 100%; height:100%; font-size:100%;border:none;"></td>
+            </tr>
+            
+        </table>
+        
+
+
     </head>
     <body style="background-color: sienna;">
+        <form style="position:absolute; top: 20%; left:35%;">
+        <input type="week" style="background-color: sienna;"  id="Day">
+        <button type="button"  style="background-color: sienna; width: 55px; height: 18px;" onclick="Getday(); document.querySelector('table').style.color='white'
+        document.querySelector('table').border='1'"
+        >ENTER</button>
+        <br><br>
+        <div id='result' style=" color:yellow;"></div>
+        
+        </form>
+        
+        
+        
+
         <h1 style="position: absolute; left: 150px; color:ivory;">ToDoList</h1>
        <div id="Button" >
         <a href="Today.html" ><input type="button" value="Today" style="font-size: 40px;
@@ -21,8 +67,9 @@
             color: moccasin; background-color: sienna;"></a>
         <a href="Month.html"><input type="button" value="Month" style="font-size: 40px;
             color: moccasin; background-color: sienna;" ></a>
-        <a href="Year.html"><input type="button" value="Year" style="font-size: 40px;
-            color: moccasin; background-color: sienna;"></a>
+        
        </div>
     </body>
+    
 </html>
+
